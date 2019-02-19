@@ -1,5 +1,7 @@
 <?php
 
+#FUCK YUMIKO
+
 namespace VirVolta;
 
 use pocketmine\entity\Effect;
@@ -69,9 +71,9 @@ class ItemEffect extends PluginBase implements Listener
                     }
 
                     $event->setCancelled();
-                    break;
 
                 }
+                break;
 
             }
 
