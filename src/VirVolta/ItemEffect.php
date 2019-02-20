@@ -8,6 +8,9 @@ use pocketmine\entity\Effect;
 use pocketmine\entity\EffectInstance;
 use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\item\Item;
+use pocketmine\item\ItemIds;
+use pocketmine\level\sound\PopSound;
+use pocketmine\math\Vector3;
 use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
@@ -36,16 +39,23 @@ class ItemEffect extends PluginBase implements Listener
     {
         $player = $event->getPlayer();
         $item = $event->getItem();
+        $configs = $this->config->getAll();
+        $data = $this->getInArray($item->getId(),$item->getDamage());
 
-        foreach ($this->config->getAll() as $id => $array) {
+        if ($this->getinArray($item->getId(),$item->getDamage()) === null) {
 
-            if ($item->getId() === $id && $item->getDamage() === $array["damage"]) {
+            $id = Item::fromString($data);
+
+            if ($item->getId() === $id->getId() and ($id->getDamage() == 0 or $item->getDamage() == $id->getDamage())) {
+
+                var_dump($data);
+                $array = $configs[$data];
 
                 if ($this->onCountDown($player,$array["countdown"])) {
 
                     if ($array["consume"] == true) {
 
-                        $player->getInventory()->removeItem(Item::get($id,$array["damage"],1));
+                        $player->getInventory()->removeItem(Item::get($id->getId(),$id->getDamage(),1));
 
                     }
 
@@ -73,7 +83,6 @@ class ItemEffect extends PluginBase implements Listener
                     $event->setCancelled();
 
                 }
-                break;
 
             }
 
@@ -100,6 +109,25 @@ class ItemEffect extends PluginBase implements Listener
         }
 
         return true;
+
+    }
+
+    public function getInArray(int $id, int $damage)
+    {
+        $configs = $this->config->getAll();
+        $ids = array_keys($configs);
+
+        if (in_array("$id",$ids)) {
+
+            return "$id";
+
+        } else if (in_array("$id:$damage",$ids)) {
+
+            return "$id:$damage";
+
+        }
+
+        return null;
 
     }
 
