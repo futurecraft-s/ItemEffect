@@ -1,15 +1,20 @@
-﻿---
-
-#the id ,the metadata of the item
-id: "347:0"
-
-#message
-msg-chest-null: "§cThere are no safes around you"
-msg-chest: "§cThere are % safes around you" #% = number of chests
-
-#radius chestfinder
-radius: 50
-
-#repetition time (chosen 3sec if you have a lot of players)
-repeat: 3 #sec
+---
+"353": #id item
+  countdown: 5 #basic is 0.5
+  consume: true #true = 1 item removed false = no item removed
+  message: "§bWell done ,you have a Speed" #message to not have a message metered a space
+  effect:
+    1: #id effect
+      durability: 20 #sec
+      amplifier: 2
+      visible: true #particle
+"351:1": #id item
+  countdown: 0 #basic is 0.5
+  consume: true #true = 1 item removed false = no item removed
+  message: "§cWell done ,you have a Health" #message to not have a message metered a space
+  effect:
+    6: #id effect
+      durability: 1 #sec
+      amplifier: 1
+      visible: false #particle
 ...
