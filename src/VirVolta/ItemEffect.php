@@ -42,13 +42,12 @@ class ItemEffect extends PluginBase implements Listener
         $configs = $this->config->getAll();
         $data = $this->getInArray($item->getId(),$item->getDamage());
 
-        if ($this->getinArray($item->getId(),$item->getDamage()) === null) {
+        if (!is_null($this->getinArray($item->getId(),$item->getDamage()))) {
 
             $id = Item::fromString($data);
 
             if ($item->getId() === $id->getId() and ($id->getDamage() == 0 or $item->getDamage() == $id->getDamage())) {
 
-                var_dump($data);
                 $array = $configs[$data];
 
                 if ($this->onCountDown($player,$array["countdown"])) {
