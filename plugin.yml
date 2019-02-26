@@ -1,7 +1,7 @@
 name: ItemEffect
 main: VirVolta\ItemEffect\ItemEffect
 api: [3.0.0]
-author: HighLev , VirVolta and Yumiko
+author: HighLev and VirVolta
 website: https://discord.gg/ESEyknP
 version: 0.1
 description: ItemEffect
