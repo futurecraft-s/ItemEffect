@@ -1,6 +1,6 @@
 <?php
 #Love Yumiko
-namespace VirVolta/ItemEffect;
+namespace VirVolta\ItemEffect;
 use pocketmine\entity\Effect;
 use pocketmine\entity\EffectInstance;
 use pocketmine\event\player\PlayerInteractEvent;
