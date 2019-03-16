@@ -4,4 +4,4 @@ api: [3.0.0]
 author: HighLev and VirVolta
 website: https://discord.gg/ESEyknP
 version: 0.1
-description: ItemEffect
+description: add Some effect in your item with cooldown and message
