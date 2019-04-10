@@ -1,5 +1,5 @@
 # ItemEffect
-Parties plugin for PocketMine-MP
+Item Effect plugin for PocketMine-MP
 
 ## Using Plugin
 
