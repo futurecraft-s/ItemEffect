@@ -1,7 +1,7 @@
 name: ItemEffect
 main: VirVolta\ItemEffect\ItemEffect
 api: [3.0.0]
-author: HighLev and VirVolta
-website: https://discord.gg/ESEyknP
-version: 0.1
+author: VirVolta
+website: https://discord.gg/g4aEtB
+version: 0.3
 description: add Some effect in your item with cooldown and message

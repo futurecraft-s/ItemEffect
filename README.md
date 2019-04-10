@@ -1,3 +1,20 @@
 # ItemEffect
-Allows you to add effects to any item
-Add some effect and customizable with what you want !
+Parties plugin for PocketMine-MP
+
+## Using Plugin
+
+### Getting the instance of the plugin
+
+```YAML
+"id:metadata":
+  countdown: number
+  consume: true or false
+  message: "message" or null
+  effect:
+    id:
+      durability: time in secounde
+      amplifier: effect strength
+      visible: true or false particules
+```
+
+You can join our Discord [here](https://discord.gg/g4aEtB)
