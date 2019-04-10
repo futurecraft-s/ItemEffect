@@ -12,9 +12,9 @@ Item Effect plugin for PocketMine-MP
   message: "message" or null
   effect:
     id:
-      durability: time in secounde
+      durability: time in seconde
       amplifier: effect strength
       visible: true or false particules
 ```
 
-You can join our Discord [here](https://discord.gg/g4aEtB)
+You can join our Discord [here](https://discord.gg/Vyznuka)
