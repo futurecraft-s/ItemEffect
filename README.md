@@ -3,7 +3,7 @@ Item Effect plugin for PocketMine-MP
 
 ## Using Plugin
 
-### Getting the instance of the plugin
+### Getting the config.yml of the plugin
 
 ```YAML
 "id:metadata":
