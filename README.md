@@ -35,5 +35,3 @@ Item Effect plugin for PocketMine-MP
       #Allows you to set yes or no particles to the effect
       visible: true or false
 ```
-
-You can join our Discord [here](https://discord.gg/Vyznuka)
